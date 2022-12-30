@@ -1,6 +1,6 @@
 -- Bài 1: Lệnh CREATE PROCEDURE
 -- 1
-CREATE OR REPLACE PROCEDURE 'dept_info'
+CREATE OR REPLACE PROCEDURE dept_info
     (id_dept IN departments.department_id%TYPE, department OUT departments%ROWTYPE)
 IS
 BEGIN 
@@ -12,7 +12,7 @@ BEGIN
 END;
 
 -- 2
-CREATE OR REPLACE PROCEDURE 'add_job'
+CREATE OR REPLACE PROCEDURE add_job
     (id_job IN jobs.job_id%TYPE, title_job IN jobs.job_title%TYPE)
 IS 
 BEGIN 
@@ -24,7 +24,7 @@ BEGIN
 END;
 
 -- 3
-CREATE OR REPLACE PROCEDURE 'update_comm'
+CREATE OR REPLACE PROCEDURE update_comm
     (id_employee IN employees.employee_id%TYPE)
 IS 
 BEGIN 
@@ -33,7 +33,7 @@ BEGIN
 END;
 
 -- 4
-CREATE OR REPLACE PROCEDURE 'add_emp'
+CREATE OR REPLACE PROCEDURE add_emp
     (
         emp_id IN employees.employee_id%TYPE, 
         emp_firstname IN employees.first_name%TYPE, 
@@ -80,7 +80,7 @@ BEGIN
 END;
 
 -- 5
-CREATE OR REPLACE PROCEDURE 'delete_emp'
+CREATE OR REPLACE PROCEDURE delete_emp
     (emp_id IN )
 IS 
 BEGIN 
@@ -88,7 +88,7 @@ BEGIN
 END;
 
 -- 6
-CREATE OR REPLACE PROCEDURE 'find_emp'
+CREATE OR REPLACE PROCEDURE find_emp
 IS 
 BEGIN 
     SELECT emp
@@ -99,7 +99,7 @@ BEGIN
 END;
 
 -- 7
-CREATE OR REPLACE PROCEDURE 'update_comm'
+CREATE OR REPLACE PROCEDURE update_comm
 IS 
     temp_salary employees.salary%TYPE;
 BEGIN 
@@ -125,7 +125,7 @@ BEGIN
 END;
 
 -- 8
-CREATE OR REPLACE PROCEDURE 'job_his'
+CREATE OR REPLACE PROCEDURE job_his
     (emp_id IN employees.employee_id%TYPE)
 IS 
 BEGIN 
